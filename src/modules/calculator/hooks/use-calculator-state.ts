@@ -72,11 +72,7 @@ const reducer = (
     case CalculatorStateActionTypes.CALCULATE: {
       const newState = { ...state };
 
-      if (
-        newState.accumulatedTotal === 0 &&
-        newState.currentTotal === 0 &&
-        newState.currentOperator == null
-      ) {
+      if (state.currentOperator === null) {
         return newState;
       }
 
